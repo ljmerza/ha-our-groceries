@@ -4,7 +4,7 @@
     "documentation": "https://www.home-assistant.io/components/py-our-groceries",
     "requirements": [],
     "dependencies": [
-        "ourgroceries==1.0.2"
+        "ourgroceries==1.0.3"
     ],
     "codeowners": []
 }
