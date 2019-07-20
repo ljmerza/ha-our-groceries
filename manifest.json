@@ -1,0 +1,10 @@
+{
+    "domain": "ourgroceries",
+    "name": "Our Groceries",
+    "documentation": "https://www.home-assistant.io/components/py-our-groceries",
+    "requirements": [],
+    "dependencies": [
+        "ourgroceries==1.0.2"
+    ],
+    "codeowners": []
+}
