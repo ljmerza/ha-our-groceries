@@ -28,8 +28,8 @@ In your `configuration.yaml` file add:
 
 ```yaml
 ourgroceries:
-    username: !secret our_groceries_username
-    password: !secret our_groceries_password
+  username: !secret our_groceries_username
+  password: !secret our_groceries_password
 ```
 
 ---
