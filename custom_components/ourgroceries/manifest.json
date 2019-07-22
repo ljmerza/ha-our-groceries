@@ -2,9 +2,9 @@
     "domain": "ourgroceries",
     "name": "Our Groceries",
     "documentation": "https://www.home-assistant.io/components/py-our-groceries",
-    "requirements": [],
-    "dependencies": [
+    "requirements": [
         "ourgroceries==1.0.3"
     ],
+    "dependencies": [],
     "codeowners": []
 }
