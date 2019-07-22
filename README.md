@@ -23,11 +23,13 @@ Gets your our groceries lists.
 | username | string | **Required** | your our groceries username
 | password | string | **Required** | your our groceries password
 
+
+In your `configuration.yaml` file add:
+
 ```yaml
-sensor:
-  - platform: ourgroceries
-    username: !secret our_groceries_username
-    password: !secret our_groceries_password
+ourgroceries:
+  username: !secret our_groceries_username
+  password: !secret our_groceries_password
 ```
 
 ---
