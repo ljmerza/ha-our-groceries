@@ -8,7 +8,6 @@ import voluptuous as vol
 
 from homeassistant.components import http
 from homeassistant.components.http.data_validator import RequestDataValidator
-from homeassistant.components.sensor import PLATFORM_SCHEMA
 from homeassistant.const import (CONF_USERNAME, CONF_PASSWORD)
 from homeassistant.helpers import config_validation as cv
 from homeassistant.helpers.discovery import async_load_platform
