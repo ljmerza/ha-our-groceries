@@ -8,14 +8,13 @@ import voluptuous as vol
 
 from homeassistant.components import http
 from homeassistant.components.http.data_validator import RequestDataValidator
-from homeassistant.components.sensor import PLATFORM_SCHEMA
 from homeassistant.const import (CONF_USERNAME, CONF_PASSWORD)
 from homeassistant.helpers import config_validation as cv
 from homeassistant.helpers.discovery import async_load_platform
 from homeassistant.helpers.entity_component import EntityComponent
 
 
-__version__ = '1.1.1'
+__version__ = '1.2.0'
 _LOGGER = logging.getLogger(__name__)
 SCAN_INTERVAL = timedelta(seconds=300)
 DOMAIN = 'ourgroceries'
@@ -57,7 +56,7 @@ def _handle_api_errors(handler):
             result = await handler(view, request, *args, **kwargs)
             return result
         except Exception as err:
-            return view.json_message(msg=err, status_code=status, message_code=err.__class__.__name__.lower())
+            return view.json_message(msg=err, status_code=500, message_code=err.__class__.__name__.lower())
 
     return error_handler
 
@@ -78,6 +77,7 @@ class OurGroceriesView(http.HomeAssistantView):
         vol.Optional('list_id'): str,
         vol.Optional('list_type'): str,
         vol.Optional('name'): str,
+        vol.Optional('value'): str,
         vol.Optional('item_id'): str,
         vol.Optional('cross_off'): bool,
     }))
