@@ -32,6 +32,62 @@ ourgroceries:
   password: !secret our_groceries_password
 ```
 
+## Scriptable Services
+
+### Add to list
+
+Adds one or more items to a list.
+
+| Name | Type | Requirement | `default` Description
+| ---- | ---- | ------- | -----------
+| list_id | string | **Required** | name or ID of the OurGroceries list
+| items | string OR string[] | **Required** | item(s) to be added to the list
+
+```yaml
+service: ourgroceries.add_to_list
+data:
+  list_id: "My List"
+  items:
+    - "Milk"
+    - "Eggs"
+```
+
+### Remove from list
+
+Removes one or more items from a list.
+
+| Name | Type | Requirement | `default` Description
+| ---- | ---- | ------- | -----------
+| list_id | string | **Required** | name or ID of the OurGroceries list
+| items | string OR string[] | **Required** | item(s) to be removed from the list
+
+```yaml
+service: ourgroceries.remove_from_list
+data:
+  list_id: "My List"
+  items:
+    - "Milk"
+    - "Eggs"
+```
+
+### Copy to list
+
+Copies all items from one list to another.
+
+| Name | Type | Requirement | `default` Description
+| ---- | ---- | ------- | -----------
+| list_id | string | **Required** | name or ID of the destination OurGroceries list
+| from_list_id | string | **Required** | name or ID of the source OurGroceries list
+| unique_only | boolean | Optional | `false` When true, only copies items that are not already on the destination list
+
+```yaml
+service: ourgroceries.copy_to_list
+data:
+  list_id: "My List"
+  from_list_id: "Source List"
+  unique_only: true
+```
+
 ---
 
 Enjoy my card? Help me out for a couple of :beers: or a :coffee:!
