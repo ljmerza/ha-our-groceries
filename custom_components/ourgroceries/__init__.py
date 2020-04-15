@@ -102,7 +102,8 @@ def _handle_api_errors(handler):
             result = await handler(view, request, *args, **kwargs)
             return result
         except Exception as err:
-            return view.json_message(msg=err, status_code=500, message_code=err.__class__.__name__.lower())
+            _LOGGER.error(err)
+            return view.json_message(message=err, status_code=500, message_code=err.__class__.__name__.lower())
 
     return error_handler
 
