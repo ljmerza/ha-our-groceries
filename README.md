@@ -1,7 +1,13 @@
 
 # Home Assistant Our Groceries Sensor
 
-Gets your our groceries lists.
+Allows you to manage lists held on [OurGroceries.com](https://www.ourgroceries.com/). 
+
+This component adds a sensor to [Home Assistant](https://www.home-assistant.io/) which can be used in your own scripts to add/delete items. 
+
+You can also edit your lists in [Home Assistant](https://www.home-assistant.io/) using out companion [Our Groceries Card](https://github.com/ljmerza/our-groceries-card)
+
+Note that [OurGroceries.com](https://www.ourgroceries.com/) also have companion iOS and Android apps which can access the same lists, although these apps display adverts whereas the [Our Groceries Card](https://github.com/ljmerza/our-groceries-card) for [Home Assistant](https://www.home-assistant.io/) does not.
 
 ---
 
@@ -11,10 +17,16 @@ Gets your our groceries lists.
 ![Project Maintenance][maintenance-shield]
 [![GitHub Activity][commits-shield]][commits]
 
-## Installation
+## Installation through [HACS](https://github.com/custom-components/hacs)
+Use [HACS](https://github.com/custom-components/hacs) to install the **Our Groceries** integration.
 
+## Manual Installation
+Use this route only if you do not want to use [HACS](https://github.com/custom-components/hacs) and love the pain of manually installing regular updates.
 * Add the `ourgroceries` folder in your `custom_components` folder
 
+## Usage
+
+Before you can configure this sensor, you must sign up for an account at [OurGroceries.com](https://www.ourgroceries.com/).  
 
 ## Options
 
