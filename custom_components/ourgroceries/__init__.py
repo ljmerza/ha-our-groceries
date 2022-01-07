@@ -172,7 +172,7 @@ class OurGroceriesView(http.HomeAssistantView):
             _LOGGER.debug('web post get_list_items list_id:{}, value:{}'.format(list_id, value))
             if list_id is None or value is None:
                 return self.json({'error': 'missing list_id'}, status_code=400)
-            api_data = await self._og.add_item_to_list(list_id, value)
+            api_data = await self._og.add_item_to_list(list_id, value, None)
         
         if command == 'remove_item_from_list':
             list_id = data.get('list_id')
@@ -238,7 +238,7 @@ class OurGroceriesServices:
         internal_id = await self._lookup_list(list_id)
 
         for item in items:
-            await self._og.add_item_to_list(internal_id, item)
+            await self._og.add_item_to_list(internal_id, item, None)
 
         return True
 
