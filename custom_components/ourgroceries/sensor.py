@@ -39,7 +39,7 @@ class OurGroceriesSensor(Entity):
         return shopping_lists + recipes
 
     @property
-    def device_state_attributes(self):
+    def extra_state_attributes(self):
         """Return the state attributes."""
         return {
             ATTR_RECIPES: self._lists.get('recipes'),
