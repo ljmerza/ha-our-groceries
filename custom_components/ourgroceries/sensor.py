@@ -52,6 +52,18 @@ class OurGroceriesSensor(Entity):
         }
 
     @property
+    def device_state_attributes(self):
+        """Return the state attributes (depricated)."""
+        _LOGGER.debug({
+            ATTR_RECIPES: self._lists.get('recipes'),
+            ATTR_SHOPPING_LISTS: self._lists.get('shoppingLists')
+        })
+        return {
+            ATTR_RECIPES: self._lists.get('recipes'),
+            ATTR_SHOPPING_LISTS: self._lists.get('shoppingLists')
+        }
+
+    @property
     def icon(self):
         """Return the icon to use in the frontend."""
         return 'mdi:format-list-bulleted'
