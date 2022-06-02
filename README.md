@@ -17,11 +17,11 @@ Note that [OurGroceries.com](https://www.ourgroceries.com/) also have companion 
 ![Project Maintenance][maintenance-shield]
 [![GitHub Activity][commits-shield]][commits]
 
-## Installation through [HACS](https://github.com/custom-components/hacs)
-Use [HACS](https://github.com/custom-components/hacs) to install the **Our Groceries** integration.
+## Installation through [HACS](https://hacs.xyz/)
+Use [HACS](https://hacs.xyz/) to install the **Our Groceries** integration.
 
 ## Manual Installation
-Use this route only if you do not want to use [HACS](https://github.com/custom-components/hacs) and love the pain of manually installing regular updates.
+Use this route only if you do not want to use [HACS](https://hacs.xyz/) and love the pain of manually installing regular updates.
 * Add the `ourgroceries` folder in your `custom_components` folder
 
 ## Usage
