@@ -1,3 +1,5 @@
+# Home Assistant v2023.12.0 will add ourgroceries integration so this repo is archived.
+
 
 # Home Assistant Our Groceries Sensor
 
